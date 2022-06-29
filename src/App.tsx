@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 
+function clamp(val: number, max: number, min: number) {
+  return Math.max(Math.min(val, max), min);
+}
+
 function normalize(val: number, max: number, min: number) {
   return Math.max(Math.min((val - min) / (max - min), 1), 0);
 }
@@ -34,7 +38,7 @@ function App() {
   const itemsToDonate = Math.ceil(xpRequired / itemTypeDivided);
 
   return (
-    <div className="App">
+    <div className="App mb-4">
       <h1 className='mb-4 text-xl text-center'>The Division 2 Expertise/Proficency Calculator</h1>
       <div className='flex flex-1 w-full flex-col'>
         <div className='flex justify-between'>
