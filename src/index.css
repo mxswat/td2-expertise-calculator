@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(./font/stylesheet.css);
+
 html {
   font-size: 16px;
+  font-family: 'Borda';
 }
-
-#root {}

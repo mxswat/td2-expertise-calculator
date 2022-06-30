@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
 
-function clamp(val: number, max: number, min: number) {
-  return Math.max(Math.min(val, max), min);
+function safeClamp(val: number, max: number, min: number) {
+  return isNaN(val) ? min : Math.max(Math.min(val, max), min);
 }
 
 function normalize(val: number, max: number, min: number) {
-  return Math.max(Math.min((val - min) / (max - min), 1), 0);
+  return safeClamp((val - min) / (max - min), 1, 0);
 }
 
 function calcXPRequired(proficencyRank: number, rankProgress: number) {
@@ -25,21 +25,23 @@ function App() {
 
   const onProficencyRankChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value)
-    setProficencyRank(isNaN(value) ? 0 : value)
+    setProficencyRank(safeClamp(value, 9, 0))
   }
 
   const onRankProgressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = normalize(parseInt(e.target.value), 88000, 0)
-    setRankProgress(isNaN(value) ? 0 : parseInt(e.target.value))
-    setBarPercentage(isNaN(value) ? 0 : (value * 100))
+    const value = normalize(
+      safeClamp(parseInt(e.target.value), 88000, 0), 88000, 0
+    )
+    setRankProgress(value)
+    setBarPercentage(value * 100)
   }
 
   const xpRequired = calcXPRequired(proficencyRank, rankProgress)
   const itemsToDonate = Math.ceil(xpRequired / itemTypeDivided);
 
   return (
-    <div className="App mb-4">
-      <h1 className='mb-4 text-xl text-center'>The Division 2 Expertise/Proficency Calculator</h1>
+    <div className="App">
+      <h1 className='mb-8 mt-8 text-xl text-center'>The Division 2 Expertise/Proficency Calculator</h1>
       <div className='flex flex-1 w-full flex-col'>
         <div className='flex justify-between'>
           <span className='text-lg'>Proficency Rank</span>
@@ -56,11 +58,11 @@ function App() {
         <div className='flex flex-col mt-4 mb-4'>
           Calculate for:
           <label className='flex items-center capitalize mb-1' htmlFor="8800">
-            <input className='mr-1' type="radio" name="gender" value="8800" onChange={handleItemType} defaultChecked />
+            <input className='mr-1' type="radio" name="gender" value="8800" id="8800" onChange={handleItemType} defaultChecked />
             normal brands and gear set pieces
           </label>
           <label className='flex items-center capitalize' htmlFor="44000">
-            <input className='mr-1' type="radio" name="gender" value="44000" onChange={handleItemType} />
+            <input className='mr-1' type="radio" name="gender" value="44000" id="44000" onChange={handleItemType} />
             weapons, improvised gear, exotics and named
           </label>
         </div>
