@@ -40,10 +40,10 @@ function App() {
 
   return (
     <div className="App p-4">
-      <h1 className='my-5 text-2xl text-center'>The Division 2 Expertise/Proficency Calculator</h1>
+      <h1 className='my-5 text-2xl text-center'>The Division 2 Expertise/Proficiency Calculator</h1>
       <div className='flex flex-1 w-full flex-col'>
         <div className='flex justify-between mb-2'>
-          <span className='text-lg'>Proficency Rank</span>
+          <span className='text-lg'>Proficiency Rank</span>
           <input className='text-lg td2-input' type="number" placeholder='0' min={0} max={9} step={1} onChange={onProficencyRankChange} />
         </div>
         <div className='flex justify-between mb-2'>
