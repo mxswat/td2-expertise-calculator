@@ -1,14 +1,24 @@
 .App {
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
-  padding: 8px;
+  max-width: 450px;
+  
+  background: rgb(24, 24, 24);
+  border: 1px solid var(--td-orange);
+
   margin: auto;
+  margin-top: 10vh;
 }
 
 .td2-input {
   width: 100px;
-  outline: 1px solid red;
+  background: rgb(16 16 16);
+  color: white;
+  padding: 2px 4px;
+  border: 1px solid var(--td-orange);
+}
+
+input[type='radio']{
+  accent-color: var(--td-orange);
 }
