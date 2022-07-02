@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://mxswat.github.io/td2-expertise-calculator/static/css/main.4bb46e6b.css",
-    "main.js": "https://mxswat.github.io/td2-expertise-calculator/static/js/main.3380d820.js",
+    "main.css": "https://mxswat.github.io/td2-expertise-calculator/static/css/main.ad89ae0d.css",
+    "main.js": "https://mxswat.github.io/td2-expertise-calculator/static/js/main.1fbad9d3.js",
     "static/media/Borda-Regular12.woff": "https://mxswat.github.io/td2-expertise-calculator/static/media/Borda-Regular12.dd58406a02372e48c92c.woff",
     "static/media/Borda-Regular3.woff": "https://mxswat.github.io/td2-expertise-calculator/static/media/Borda-Regular3.20e05d25092e1a096f14.woff",
     "static/media/Borda-Regular12.woff2": "https://mxswat.github.io/td2-expertise-calculator/static/media/Borda-Regular12.c8da3e584163b6c29dd7.woff2",
     "static/media/Borda-Regular3.woff2": "https://mxswat.github.io/td2-expertise-calculator/static/media/Borda-Regular3.8701c3b8d41042072e8d.woff2",
     "index.html": "https://mxswat.github.io/td2-expertise-calculator/index.html",
-    "main.4bb46e6b.css.map": "https://mxswat.github.io/td2-expertise-calculator/static/css/main.4bb46e6b.css.map",
-    "main.3380d820.js.map": "https://mxswat.github.io/td2-expertise-calculator/static/js/main.3380d820.js.map"
+    "main.ad89ae0d.css.map": "https://mxswat.github.io/td2-expertise-calculator/static/css/main.ad89ae0d.css.map",
+    "main.1fbad9d3.js.map": "https://mxswat.github.io/td2-expertise-calculator/static/js/main.1fbad9d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bb46e6b.css",
-    "static/js/main.3380d820.js"
+    "static/css/main.ad89ae0d.css",
+    "static/js/main.1fbad9d3.js"
   ]
 }
