@@ -56,11 +56,11 @@ function App() {
 
         <div className='flex flex-col mt-4 mb-4'>
           Calculate for:
-          <label className='flex items-center capitalize mb-1' htmlFor="8800">
+          <label className='flex items-baseline capitalize mb-1' htmlFor="8800">
             <input className='mr-1' type="radio" name="gender" value="8800" id="8800" onChange={handleItemType} defaultChecked />
             normal brands and gear set pieces
           </label>
-          <label className='flex items-center capitalize' htmlFor="44000">
+          <label className='flex items-baseline capitalize' htmlFor="44000">
             <input className='mr-1' type="radio" name="gender" value="44000" id="44000" onChange={handleItemType} />
             weapons, improvised gear, exotics and named
           </label>
