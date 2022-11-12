@@ -35,11 +35,15 @@ function App() {
     setBarPercentage(xpBarMult * 100)
   }
 
+  const openPopup = () => {
+    window.open(window.location.href, document.title, 'width=460,height=460')
+  }
+
   const xpRequired = calcXPRequired(proficencyRank, rankProgress)
   const itemsToDonate = Math.ceil(xpRequired / itemTypeDivided);
 
   return (
-    <div className="App p-4">
+    <div className="App m-auto p-4">
       <h1 className='my-5 text-2xl text-center'>The Division 2 Expertise/Proficiency Calculator</h1>
       <div className='flex flex-1 w-full flex-col'>
         <div className='flex justify-between mb-2'>
@@ -65,10 +69,14 @@ function App() {
             weapons, improvised gear, exotics and named
           </label>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-2">
           <span>XP Required = {xpRequired}</span>
           <span>Items to donate = {itemsToDonate}</span>
         </div>
+        {
+          // Only show if it's NOT in a popup window
+          !(window.opener && window.opener !== window) && (<button className='border border-[#FF6D10]' onClick={openPopup}> Open as popup </button>)
+        }
       </div>
     </div>
   );

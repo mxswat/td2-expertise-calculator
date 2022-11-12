@@ -6,9 +6,6 @@
   
   background: rgb(24, 24, 24);
   border: 1px solid var(--td-orange);
-
-  margin: auto;
-  margin-top: 10vh;
 }
 
 .td2-input {
